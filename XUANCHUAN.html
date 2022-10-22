@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+<title>宣传片</title>
+<link rel="icon" type="image/x-icon" href="f.ico">
+<body>
+<body oncontextmenu="return false" onselectstart="return false">
+<center>
+<p>
+<br>
+<h2>HSD Studios宣传片</h2>
+<h4>↓↓往下拉网页↓↓</h4>
+<br>
+<br>
+</p>
+<div id="videoDiv">
+<video id="video1" width="960" height="700" controls="true" controlslist="nodownload" autoplay="autoplay">
+  <source src="/i/movie.ogg" type="video/ogg" />
+  <source src="H264XUANCHUAN.mp4" type="video/mp4" />
+  <source src="/i/movie.webm" type="video/webm" />
+  <object data="H264XUANCHUAN.mp4" width="960" height="720">
+    <embed width="960" height="700" src="/i/movie.swf" />
+  </object>
+</video>
+</div>
+</center>
+<script>
+window.oncontextmenu=function(e){
+    //取消默认的浏览器自带右键 很重要！！
+    e.preventDefault();
+}
+// 如果使用jquery,如下代码也可以
+//$('#video1').bind('contextmenu',function() { return false; });
+</script>
+<script>
+//屏蔽F12和右键
+ function click(e) {
+ if (document.all) {
+ if (event.button == 2 || event.button == 3) {
+ alert("欢迎光临寒舍，有什么需要帮忙的话，请与站长联系！谢谢您的合作！！！");
+          oncontextmenu = 'return false';
+        }
+      }
+ if (document.layers) {
+ if (e.which == 3) {
+          oncontextmenu = 'return false';
+        }
+      }
+    }
+ if (document.layers) {
+      document.captureEvents(Event.MOUSEDOWN);
+    }
+    document.onmousedown = click;
+    document.oncontextmenu = new Function("return false;")
+
+    document.onkeydown = document.onkeyup = document.onkeypress = function () {
+ if (window.event.keyCode == 123) {
+        window.event.returnValue = false;
+ return (false);
+      }
+    }
+<p>
+<br><br><br><br><br>
+<h6>因为文件大小限制，本网站只播放清晰度为1080P的宣传片，更多请前往西瓜视频官方账号（名称：花生豆MF），那里有4K分辨率的视频！</h6>
+</p>
+</body>
+</html>
