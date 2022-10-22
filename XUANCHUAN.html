@@ -8,6 +8,14 @@
 <body oncontextmenu="return false" onselectstart="return false">
 <center>
 <p>
+<script>
+window.onkeydown = function (e) {
+var ctrlKey = e.ctrlKey || e.metaKey;
+if (ctrlKey) {
+    e.preventDefault();
+    }
+}
+</script>
 <br>
 <h2>HSD Studios宣传片</h2>
 <h4>↓↓往下拉网页↓↓</h4>
@@ -61,17 +69,7 @@ window.oncontextmenu=function(e){
       }
     }
 </script>
-<script type="text/javascript">
-            document.onkeydown = function () {
-               if (window.event && window.event.keyCode == 123) { 
-                     event.keyCode = 0;
-                     event.returnValue = false;
-                     return false;
-               }
-if (event.ctrlKey && window.event.keyCode==85){
-			            return false;}
-            };
-        </script>
+
 <p>
 <br><br><br><br><br>
 <h6>因为文件大小限制，本网站只播放清晰度为1080P的宣传片，更多请前往西瓜视频官方账号（名称：花生豆MF），那里有4K分辨率的视频！</h6>
